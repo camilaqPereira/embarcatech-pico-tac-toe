@@ -37,6 +37,7 @@ pico_sdk_init()
 
 add_executable(embarcatech-game-emulator embarcatech-game-emulator.c 
         lib/ssd1306.c
+        lib/led_matrix.c
 )
 
 pico_set_program_name(embarcatech-game-emulator "embarcatech-game-emulator")

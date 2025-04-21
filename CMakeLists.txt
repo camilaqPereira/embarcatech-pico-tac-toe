@@ -48,6 +48,11 @@ pico_set_program_version(main "0.1")
 pico_enable_stdio_uart(main 0)
 pico_enable_stdio_usb(main 1)
 
+pico_generate_pio_header(main ${CMAKE_CURRENT_LIST_DIR}/main.pio)
+
+target_sources(main PRIVATE main.c)
+
+
 # Add the standard library to the build
 target_link_libraries(main
         pico_stdlib)
@@ -61,6 +66,10 @@ target_include_directories(main PRIVATE
 target_link_libraries(main 
         hardware_timer
         hardware_clocks
+        hardware_i2c
+        hardware_pio
+        hardware_pwm
+        hardware_adc
         
         )
 

@@ -39,6 +39,7 @@ add_executable(main main.c
         lib/ssd1306.c
         lib/led_matrix.c
         lib/buzzer.c
+        lib/joystick.c
 )
 
 pico_set_program_name(main "main")
